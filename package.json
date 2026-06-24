@@ -17,7 +17,7 @@
     "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.108.2",
     "@x402/core": "^2.16.0",
-    "@x402/evm": "^0.0.1",
+    "@x402/evm": "^2.16.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.4.0",
