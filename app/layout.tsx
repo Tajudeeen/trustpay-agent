@@ -8,7 +8,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "TrustPay Agent",
-  description: "Reputation-backed AI payment agent for x402 nanopayments on Arc.",
+  description: "Reputation-backed AI payment agent for x402 nanopayments on Arc. Checks provider trust before every payment.",
+  openGraph: {
+    title: "TrustPay Agent",
+    description: "Reputation-backed AI payment agent for x402 nanopayments on Arc.",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

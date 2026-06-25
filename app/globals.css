@@ -39,16 +39,29 @@
   --font-mono: var(--tp-font-mono);
 }
 
-* { border-color: var(--tp-line); }
+* { border-color: var(--tp-line); box-sizing: border-box; }
+
+html { font-size: 16px; }
+
 body {
   background: var(--tp-base);
   color: var(--tp-text);
   font-family: var(--tp-font-ui);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
+
 :focus-visible { outline: 2px solid var(--tp-brass); outline-offset: 2px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Mobile base overrides */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
 }
