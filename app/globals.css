@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme inline {
+  --color-base: #0b0d0c;
+  --color-panel: #15201c;
+  --color-panel-raised: #1c2820;
+  --color-line: #2a352e;
+  --color-text: #e8e6df;
+  --color-text-dim: #8a9089;
+  --color-text-faint: #5a6058;
+  --color-brass: #c9a24b;
+  --color-brass-dim: #8a7339;
+  --color-oxide: #b8473d;
+  --color-oxide-dim: #7a3029;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+}
+
 :root {
   --tp-base: #0b0d0c;
   --tp-panel: #15201c;
@@ -13,34 +30,10 @@
   --tp-brass-dim: #8a7339;
   --tp-oxide: #b8473d;
   --tp-oxide-dim: #7a3029;
-  --tp-font-display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --tp-font-ui: "Inter", -apple-system, "Segoe UI", sans-serif;
-  --tp-font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
-  --background: var(--tp-base);
-  --foreground: var(--tp-text);
-}
-/* Inline theme variables (moved into :root to avoid unknown @theme at-rule) */
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-base: var(--tp-base);
-  --color-panel: var(--tp-panel);
-  --color-panel-raised: var(--tp-panel-raised);
-  --color-line: var(--tp-line);
-  --color-text: var(--tp-text);
-  --color-text-dim: var(--tp-text-dim);
-  --color-text-faint: var(--tp-text-faint);
-  --color-brass: var(--tp-brass);
-  --color-brass-dim: var(--tp-brass-dim);
-  --color-oxide: var(--tp-oxide);
-  --color-oxide-dim: var(--tp-oxide-dim);
-  --font-display: var(--tp-font-display);
-  --font-sans: var(--tp-font-ui);
-  --font-mono: var(--tp-font-mono);
 }
 
 * {
-  border-color: var(--tp-line);
+  border-color: #2a352e;
   box-sizing: border-box;
 }
 
@@ -49,16 +42,20 @@ html {
 }
 
 body {
-  background: var(--tp-base);
-  color: var(--tp-text);
-  font-family: var(--tp-font-ui);
+  background: #0b0d0c;
+  color: #e8e6df;
+  font-family:
+    "Inter",
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
   font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 :focus-visible {
-  outline: 2px solid var(--tp-brass);
+  outline: 2px solid #c9a24b;
   outline-offset: 2px;
 }
 
@@ -68,12 +65,5 @@ body {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-/* Mobile base overrides */
-@media (max-width: 640px) {
-  body {
-    font-size: 15px;
   }
 }
