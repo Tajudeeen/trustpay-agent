@@ -19,8 +19,8 @@
   --background: var(--tp-base);
   --foreground: var(--tp-text);
 }
-
-@theme inline {
+/* Inline theme variables (moved into :root to avoid unknown @theme at-rule) */
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-base: var(--tp-base);
@@ -39,9 +39,14 @@
   --font-mono: var(--tp-font-mono);
 }
 
-* { border-color: var(--tp-line); box-sizing: border-box; }
+* {
+  border-color: var(--tp-line);
+  box-sizing: border-box;
+}
 
-html { font-size: 16px; }
+html {
+  font-size: 16px;
+}
 
 body {
   background: var(--tp-base);
@@ -52,10 +57,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-:focus-visible { outline: 2px solid var(--tp-brass); outline-offset: 2px; }
+:focus-visible {
+  outline: 2px solid var(--tp-brass);
+  outline-offset: 2px;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
@@ -63,5 +73,7 @@ body {
 
 /* Mobile base overrides */
 @media (max-width: 640px) {
-  body { font-size: 15px; }
+  body {
+    font-size: 15px;
+  }
 }
